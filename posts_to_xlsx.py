@@ -1,7 +1,7 @@
 import pandas as pd 
 import json
 import glob
-from datetime import datetime, timedelta
+from datetime import datetime
 
 
 def timestamp(file):
@@ -50,8 +50,7 @@ for json_file in json_files:
 norm_date_list = []
 
 for unix_date in timestamp_list:
-	date = unix_date
-	dt = (datetime.fromtimestamp(date) - timedelta(hours=0)).strftime('%Y-%m-%d %H:%M:%S')
+	dt = datetime.fromtimestamp(unix_date)
 	norm_date_list.append(dt)
 
 df = pd.DataFrame({
