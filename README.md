@@ -6,16 +6,18 @@ Here you'll find some scripts to make your live easier when working with Instalo
 
 Some of them have been created to process json files, other are made to amplify the capabilities of standard extractions, using Instaloader main class to add new fields to the capture.
 
-## hashtag-post-between-dates.py
+## hashtag_post_between_dates.py
 
 **Allows you to capture all posts in certain hashtag between dates**
 
-***Important: This script works very slowly. I am currently working to improve performance and enable its use in masive captures. Not recommended for captures of more than 1000 posts.***
+***Important: This script works very slowly. I am currently working to improve performance and enable its use in masive captures. Not recommended for big captures.***
 
-+ pandas
-+ instaloader
-+ itertools
-+ datetime
+```
+from datetime import datetime
+from itertools import dropwhile, takewhile
+import instaloader
+import pandas as pd
+```
 
 **Make it work**
 
@@ -51,15 +53,56 @@ hashtag_list = ['hastag_1', 'hashtag_2', 'hastahag_n']
 
 The output file will be a .xlsx, easy to handle. Each element will be in a column. 
 
-## posts-to-xlsx.py
+## profile_posts_to_xlsx 
 
-**This scripts allows you to convert json files from an Instaloader profile extraction to a digestible .xlsx file**
+**Capture all posts from an account and export direct to a** ***.xlsx*** **file.**
+
+***Important: Working on performance improvements to make it faster. Not recomended for more than 1000 posts***
 
 **Requeriments:**
-+ pandas
-+ json
-+ glob
-+ datetime
+
+```python
+import instaloader
+import pandas as pd
+```
+**Make it work**
+
+In line 71, you can place a single username or a list of them, separated by comas:
+
+```pytnon
+profile_list = ['username_1', 'username_2', 'username_n']
+```
+
+**What will you get**
+
+A ***.xlsx*** file with this columns:
+
++ *owner_username*
++	*owner_id*
++	*post_date*
++	*post_caption*
++	*tagged_users*: users tagged in photo.
++	*caption_mentions*: users mentioned in caption field.
++	*is_video*: True / False.
++	*video_view_count*: If video = true, you'll get the view count.
++	*video_duration*: if video = true, you'll get the duration in seconds.
++	*likes*: nº of like for each post.
++	*comments*: Comments in each post. 
++	*post_url*
++	*hashtags_caption*: Hashtags in text caption. 
+
+## posts_to_xlsx.py
+
+**This scripts allows you to convert json files from an Instaloader profile extraction to a digestible** ***.xlsx*** **file**
+
+**Requeriments:**
+
+```python
+import pandas as pd 
+import json
+import glob
+from datetime import datetime
+```
 
 You'll need a profile extraction with --no-compress-json
 
