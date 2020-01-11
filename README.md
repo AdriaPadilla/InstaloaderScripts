@@ -19,14 +19,14 @@ Some of them have been created to process json files, other are made to amplify 
 
 **Make it work**
 
-You have to modify lines 22 and 23
+Range of dates: You have to modify lines 22 and 23
 
 ```python
 SINCE = datetime(2019, 12, 19) # Recent Date / format = (yyyy, mm, dd)
 UNTIL = datetime(2019, 9, 1) # Oldest Date / format = (yyyy, mm, dd)
 ```
 
-In line 79 you can place the hastags to capture. Use single hashtag or a list, separated by comas. No hashtag simbol is needed.
+Where to place the hashtags to capture: In line 79 you can place the hastags to capture. Use single hashtag or a list, separated by comas. No hashtag simbol is needed.
 
 ```python
 hashtag_list = ['hastag_1', 'hashtag_2', 'hastahag_n']
@@ -71,7 +71,7 @@ instaloader "random_account_name" --no-compress-json --no-pictures --no-videos -
 
 Please, modify the line 55 to point the folder where your json are stored:
 
-```
+```python
 json_files = glob.glob("your_path_to_json_files/*.json")
 
 ```
