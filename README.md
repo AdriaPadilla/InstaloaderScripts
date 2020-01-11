@@ -65,7 +65,7 @@ You'll need a profile extraction with --no-compress-json
 
 For example:
 
-```python
+```
 instaloader "random_account_name" --no-compress-json --no-pictures --no-videos --max-connection-attempts 0
 ```
 
