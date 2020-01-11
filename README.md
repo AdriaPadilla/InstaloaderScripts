@@ -58,11 +58,11 @@ You'll need a profile extraction with --no-compress-json
 Here's an example:
 
 ```
-**instaloader "random_account_name" --no-compress-json --no-pictures --no-videos --max-connection-attempts 0**
+instaloader "random_account_name" --no-compress-json --no-pictures --no-videos --max-connection-attempts 0
 ```
 
-*¿Do you need more help with instaloader command options?*
-*Please, check this:*
+*¿Do you need more help with instaloader command options?*<br />
+*Please, check this:*<br />
 *https://instaloader.github.io/cli-options.html*
 
 ¿What will you get?
