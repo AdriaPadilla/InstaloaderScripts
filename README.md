@@ -46,7 +46,7 @@ The output file will be a .xlsx, easy to handle. Each element will be in a colum
 
 ## posts-to-xlsx.py
 
-**This scripts allows you to convert json files from an Instaloader profile extraction to a digestible .xlsx file.e**
+**This scripts allows you to convert json files from an Instaloader profile extraction to a digestible .xlsx file**
 
 **Requeriments:**
 + pandas
