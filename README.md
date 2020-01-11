@@ -12,7 +12,7 @@ Some of them have been created to process json files, other are made to amplify 
 
 ***Important: This script works very slowly. I am currently working to improve performance and enable its use in masive captures. Not recommended for big captures.***
 
-```
+```python
 from datetime import datetime
 from itertools import dropwhile, takewhile
 import instaloader
