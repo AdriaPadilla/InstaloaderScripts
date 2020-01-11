@@ -53,7 +53,7 @@ hashtag_list = ['hastag_1', 'hashtag_2', 'hastahag_n']
 
 The output file will be a .xlsx, easy to handle. Each element will be in a column. 
 
-## profile_posts_to_xlsx 
+## profile_posts_to_xlsx.py 
 
 **Capture all posts from an account and export direct to a** ***.xlsx*** **file.**
 
