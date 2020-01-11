@@ -28,7 +28,7 @@ UNTIL = datetime(2019, 9, 1) # Oldest Date / format = (yyyy, mm, dd)
 
 In line 79 you can place the hastags to capture. Use single hashtag or a list, separated by comas. No hashtag simbol is needed.
 
-```
+```python
 hashtag_list = ['hastag_1', 'hashtag_2', 'hastahag_n']
 ```
 
@@ -65,7 +65,7 @@ You'll need a profile extraction with --no-compress-json
 
 For example:
 
-```
+```python
 instaloader "random_account_name" --no-compress-json --no-pictures --no-videos --max-connection-attempts 0
 ```
 
@@ -78,7 +78,7 @@ json_files = glob.glob("your_path_to_json_files/*.json")
 
 In line 81 you can rename your output file:
 
-```
+```python
 df.to_excel("your_output_file.xlsx")
 ```
 
