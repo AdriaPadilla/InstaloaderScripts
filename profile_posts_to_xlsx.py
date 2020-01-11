@@ -68,9 +68,7 @@ def get_profile_posts(username):
 
 	print(df)
 
-profile_list = ['lavecinarubia', 'pau_eche', 'saracarbonero']
+profile_list = ['username_1', 'username_2', 'username_n']
 
 for username in profile_list:
 	get_profile_posts(username)
-
-
