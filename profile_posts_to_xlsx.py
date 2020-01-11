@@ -1,6 +1,5 @@
 import instaloader
 import pandas as pd
-import shutil
 
 def get_profile_posts(username):
 
