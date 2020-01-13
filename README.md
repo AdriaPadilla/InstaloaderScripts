@@ -8,11 +8,11 @@ Some of them have been created to process json files, other are made to amplify 
 
 ## hashtag_post_between_dates.py
 
-- **Type: From Instagram to .xlsx file.**
+- **Type:** From Instagram to .xlsx file.
 
 - **Functionality:** Capture all posts within a certain hashtag between dates.
 
-***Important:*** *Instaloader does not work with an API in the same way that other applications do. Its functionality is more like a scraper. To obtain the publications of an old date period within a hashtag, first you have to consult all the publications, starting from the most recent one, and go backwards until you reach the starting point of your capture. So, You have to check the date of all publications and discard those that do not accomplish the date criteria.* ***This script works very slowly. I am currently working to improve performance and enable its use in masive captures. Not recommended for big captures.***
+- ***Important:*** *Instaloader does not work with an API in the same way that other applications do. Its functionality is more like a scraper. To obtain the publications of an old date period within a hashtag, first you have to consult all the publications, starting from the most recent one, and go backwards until you reach the starting point of your capture. So, You have to check the date of all publications and discard those that do not accomplish the date criteria.* ***This script works very slowly. I am currently working to improve performance and enable its use in masive captures. Not recommended for big captures.***
 
 **Requeriments**
 
@@ -59,11 +59,11 @@ The output file will be a .xlsx, easy to handle. Each element will be in a colum
 
 ## profile_posts_to_xlsx.py 
 
-**Type:** Instagram Hashtag to .xlsx file.
+- **Type:** From Instagram to .xlsx file.
 
-**Functionality:** Capture all posts from an account and export direct to a ***.xlsx*** file.
+- **Functionality:** Capture all posts from an account and export direct to a ***.xlsx*** file.
 
-***Important: Working on performance improvements to make it faster. Not recomended for more than 1000 posts***
+- ***Important: Working on performance improvements to make it faster. Not recomended for more than 1000 posts***
 
 **Requeriments:**
 
@@ -99,9 +99,9 @@ A ***.xlsx*** file with this columns:
 
 ## posts_to_xlsx.py
 
-**Type:** .json Files to .xlsx file.
+- **Type:** From .json Files to .xlsx file.
 
-**Functionality:** This scripts allows you to convert json files from an Instaloader profile extraction to a digestible ***.xlsx*** file.
+- **Functionality:** This scripts allows you to convert json files from an Instaloader profile extraction to a digestible ***.xlsx*** file.
 
 **Requeriments:**
 
