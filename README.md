@@ -8,7 +8,7 @@ Some of them have been created to process json files, other are made to amplify 
 
 ## hashtag_post_between_dates.py
 
-**Type: Instagram Hashtag => .xlsx file**
+**Type: Instagram Hashtag to .xlsx file**
 
 **Capture all posts within a certain hashtag between dates**
 
@@ -59,7 +59,7 @@ The output file will be a .xlsx, easy to handle. Each element will be in a colum
 
 ## profile_posts_to_xlsx.py 
 
-**Type: Instagram Hashtag => .xlsx file**
+**Type: Instagram Hashtag to .xlsx file**
 
 **Capture all posts from an account and export direct to a** ***.xlsx*** **file.**
 
@@ -99,7 +99,7 @@ A ***.xlsx*** file with this columns:
 
 ## posts_to_xlsx.py
 
-**Type: .json Files => .xlsx file**
+**Type: .json Files to .xlsx file**
 
 **This scripts allows you to convert json files from an Instaloader profile extraction to a digestible** ***.xlsx*** **file**
 
