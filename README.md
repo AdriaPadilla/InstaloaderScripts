@@ -51,7 +51,6 @@ hashtag_list = ['hastag_1', 'hashtag_2', 'hastahag_n']
 - *Video duration in Seconds*
 - *The nº of likes in each post*
 - *The nº of comments in each post*
-- *Post date*
 - *Post URL Shortcode*
 - *Hashtags in caption*
 
