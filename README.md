@@ -12,7 +12,7 @@ Some of them have been created to process json files, other are made to amplify 
 
 - **Functionality:** Capture all posts within a certain hashtag between dates.
 
-- ***Important:*** *Instaloader does not work with an API in the same way that other applications do. Its functionality is more like a scraper. To obtain the publications of an old date period within a hashtag, first you have to consult all the publications, starting from the most recent one, and go backwards until you reach the starting point of your capture. So, You have to check the date of all publications and discard those that do not accomplish the date criteria.* ***This script works very slowly. I am currently working to improve performance and enable its use in masive captures. Not recommended for big captures.***
+- ***Important:*** *Instaloader does not work with an API in the same way that other applications do. It works like an scraper. To obtain the publications of an old date period within a hashtag, Instaloader have to query all the publications, starting from the most recent one, and go backwards until you reach the starting point of your capture. In other words, Instaloader needs to check the date of all publications and discard those that do not accomplish the date criteria.* ***This script works very slowly. I am currently working to improve performance and enable its use in masive captures. Not recommended for big captures.***
 
 **Requeriments**
 
