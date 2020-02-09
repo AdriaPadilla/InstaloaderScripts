@@ -14,7 +14,7 @@ Some of them have been created to process json files, other are made to amplify 
 
 - ***Important:*** *Instaloader does not work with an API in the same way that other applications do. It works like an scraper. To obtain the publications of an old date period within a hashtag, Instaloader have to query all the publications, starting from the most recent one, and go backwards until you reach the starting point of your capture. In other words, Instaloader needs to check the date of all publications and discard those that do not accomplish the date criteria.* ***This script works very slowly. I am currently working to improve performance and enable its use in masive captures. Not recommended for big captures.***
 
-**Requeriments**
+**Dependences**
 
 ```python
 from datetime import datetime
@@ -64,7 +64,7 @@ The output file will be a .xlsx, easy to handle. Each element will be in a colum
 
 - ***Important: Working on performance improvements to make it faster. Not recomended for more than 1000 posts***
 
-**Requeriments:**
+**Dependences:**
 
 ```python
 import instaloader
@@ -102,7 +102,7 @@ A ***.xlsx*** file with this columns:
 
 - **Functionality:** This scripts allows you to convert json files from an Instaloader profile extraction to a digestible ***.xlsx*** file.
 
-**Requeriments:**
+**Dependences:**
 
 ```python
 import pandas as pd 
