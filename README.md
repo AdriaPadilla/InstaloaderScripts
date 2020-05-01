@@ -4,6 +4,11 @@ Hi!
 
 Here you'll find some scripts to make your live easier when working with Instaloader. 
 
+- Json files to Excel
+- Json files to SQL 
+- Capture posts within a hashtag for certain dates **(not working at 01/05/2020)**
+- Profile posts to Excel 
+
 Some of them have been created to process json files, other are made to amplify the capabilities of standard extractions, using Instaloader main class to add new fields to the capture.
 
 ## hashtag_post_between_dates.py
