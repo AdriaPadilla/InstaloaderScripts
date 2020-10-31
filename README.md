@@ -1,7 +1,5 @@
 # Instaloader Auxiliar Scripts
 
-Hi!
-
 Here you'll find some scripts to make your live easier when working with Instaloader. 
 
 - Json files to Excel
@@ -10,6 +8,8 @@ Here you'll find some scripts to make your live easier when working with Instalo
 - Profile posts to Excel 
 
 Some of them have been created to process json files, other are made to amplify the capabilities of standard extractions, using Instaloader main class to add new fields to the capture.
+## Updates 
+- 31/10/2021: improved **profile_posts_to_xlsx** with ThreadPoolExecutor to multiprocess data from Instagram responses. Now is faster. 
 
 ## hashtag_post_between_dates.py
 
@@ -61,7 +61,7 @@ hashtag_list = ['hastag_1', 'hashtag_2', 'hastahag_n']
 
 The output file will be a .xlsx, easy to handle. Each element will be in a column. 
 
-## profile_posts_to_xlsx.py 
+## profile_posts_to_xlsx
 
 - **Type:** From Instagram to .xlsx file.
 
@@ -77,11 +77,16 @@ import pandas as pd
 ```
 **Make it work**
 
-In line 71, you can place a single username or a list of them, separated by comas:
+Got to main.py, line 7, and place a single username or a list of them, separated by comas:
 
 ```pytnon
 profile_list = ['username_1', 'username_2', 'username_n']
 ```
+Run the script
+```pytnon
+python main.py
+```
+Enjoy! 
 
 **What will you get**
 
