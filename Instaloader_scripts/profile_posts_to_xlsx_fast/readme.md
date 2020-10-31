@@ -13,9 +13,9 @@ Set the aim accounts in "profile_list" --> main.py (line 7). For example:
 profile_list = ["profile_name1", "profile_name2", "etc"]
 ```
 
-
 You can configure data output in query.py
-This is the Default Config
+
+The default config will only output the post data in xlsx file.
 ```python
         download_pictures=False,
         download_videos=False,
@@ -37,5 +37,4 @@ python main.py
 The script will create a file named "output.xlsx" with all the data. 
 
 #### Citation
-*Citation APA Style: Padilla Molina, Adrian (2020). InstaloaderScripts [Software]. 
-Avaliable from: https://github.com/AdriaPadilla/Instaloader-Scripts/*
+*Citation APA Style: Padilla Molina, Adrian (2020). InstaloaderScripts [Software]. Avaliable from: https://github.com/AdriaPadilla/InstaloaderScripts/*
