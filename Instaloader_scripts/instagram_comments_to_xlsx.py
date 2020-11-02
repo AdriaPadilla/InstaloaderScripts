@@ -14,7 +14,7 @@ likes_count_list = []
 def funcion(file):
 
     post_date = str(file)
-    date = post_date.split('.')[0].split("_")[0]
+    date = post_date.split('.')[0].split("_")[0].split('\\')[1]
     print(date)
 
     with open(file) as f:
