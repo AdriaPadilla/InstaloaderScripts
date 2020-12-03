@@ -8,8 +8,9 @@ from datetime import datetime
 
 # Global Variables. Please, define usernames (without @)
 
-profile_list = ["username1", "username2", "username3", "etc"]
-save_path = "ouput/"
+profile_list = ["username", "username", "username"]
+save_path = "output_folder/"
+minutes = 300 # Sleep Time between users. 5 minutes recommend.
 
 def get_profile_posts(username, save_path):
     save_path = save_path+username+"/"
@@ -30,6 +31,9 @@ def get_profile_posts(username, save_path):
     profile = instaloader.Profile.from_username(L.context, username)
     posts = profile.get_posts()
     for post in posts:
+        post_sleep = 1 # Sleep 1 seconds between posts
+        print("sleeping for: " + str(post_sleep) + " seconds")
+        time.sleep(post_sleep)
 
         data = post.__dict__
         data_node = data["_node"]
@@ -70,6 +74,12 @@ def decode_jsons(username, save_path):
             is_video = data["is_video"]
             list_is_video.append(is_video)
 
+            try:
+                vid_v_count = data["video_view_count"]
+            except KeyError:
+                vid_v_count = "FALSE"
+                pass
+
             shortcode = "https://www.instagram.com/p/"+data["shortcode"]
             list_post_shortcode.append(shortcode)
 
@@ -109,7 +119,8 @@ def decode_jsons(username, save_path):
                 "tagged_users": list_of_tagged_users,
                 "hashtags": list_hashtags_in_text,
                 "is_video": list_is_video,
-                "shortcode": list_post_shortcode
+                "vid_view_count": vid_v_count,
+                "shortcode": list_post_shortcode,
             })
             list_of_df.append(df)
 
@@ -126,6 +137,12 @@ def loop():
         decode_jsons(username, save_path) # This will convert Json files to dataframe
         print("Finished: " + username)
 
+        actual_time = time.strftime("%H:%M:%S")
+        time_sleep = minutes / 60
+        print("sleeping for: " + str(time_sleep) + " minutes at " + actual_time)
+        time.sleep(minutes)
+
+
 def controller():
 
     # First Step:
@@ -135,7 +152,7 @@ def controller():
     # Second Step:
     # Read all .xlsx file downloaded in previous step, and create a unique file with all data
     path = os.getcwd()
-    files = glob.glob(os.path.join(path,"*.xlsx"))
+    files = glob.glob(os.path.join(path, "*.xlsx"))
 
     list_of_frames = []
     for file in files:
@@ -143,6 +160,6 @@ def controller():
         list_of_frames.append(df)
     actual_time = time.strftime("%Y-%m-%d")
     df = pd.concat(list_of_frames)
-    df.to_excel("all_together_"+actual_time+".xlsx")
+    df.to_excel("your_dataset-"+actual_time+".xlsx")
 
 controller()
