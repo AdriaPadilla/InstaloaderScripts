@@ -12,8 +12,8 @@ import time
 # Once you launch main.py, you will be asked to enter your account password.
 
 # STEP 1: Define the variables
-your_account = "your_account_to_login"
-accounts_list = ["account1", "account2", "account3", "account4", "account5", "account6"] # list of accounts to retrieve
+your_account = "your_account_login"
+accounts_list = ["account1", "account2", "etc"]
 
 
 def to_xlsx(file):
@@ -99,7 +99,10 @@ def to_xlsx(file):
             info["category_name"] = data["node"]["owner"]["category_name"]
         except KeyError:
             info["category_name"] = "null"
-
+        try:
+            info["followed_by"] = data["node"]["owner"]["edge_followed_by"]["count"]
+        except KeyError:
+            info["followed_by"] = "null"
         return info
 
 
@@ -109,7 +112,7 @@ for insta in accounts_list:
 
     global_df = []
     # THIS IS THE COMMAND EXECUTED IN TERMINAL
-    os.system(f"instaloader {insta} --no-videos --no-pictures --no-captions --no-compress-json --max-connection-attempts 0 --login {your_account}")
+    os.system(f"instaloader {insta} --no-videos --no-pictures --no-captions --no-compress-json --max-connection-attempts 0  --login {your_account}")
 
     json_files = glob.glob(f"{insta}/*.json")  # Path To JSON FILES
     amount = len(json_files)  # Count nº of files for progress bar
@@ -142,8 +145,8 @@ for insta in accounts_list:
         global_df.append(df)
 
     final = pd.concat(global_df)
-    final.to_csv(f"{insta}/{insta}.csv", index=False, sep=",",quotechar='"', line_terminator="\n")  # Your Filename
+    final.to_excel(f"datasets/{insta}.xlsx", index=False)  # Your Filename
     print("job done!")
     print("sleeping for 1 minute")
-    time.sleep(60)
+    time.sleep(0)
     print("Start new")
