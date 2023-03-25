@@ -2,6 +2,12 @@
 
 Here you'll find some scripts to make your live easier when working with Instaloader data. 
 
+## Important
+
+Instaloader is constantly improving and evolving, and adapting its code to platform changes. This implies that some endpoints may change, and some of the scripts may stop working.
+
+The objective of this repository is to serve as an example, it has educational purposes, and in no case does it pretend to be perfect or fully functional.
+
 Please, see: [Instaloader](https://instaloader.github.io/)
 
 - Json files to Excel
@@ -12,9 +18,3 @@ Please, see: [Instaloader](https://instaloader.github.io/)
 
 Some of them have been created to process json files, other are made to amplify the capabilities of standard extractions, using Instaloader main class to add new fields to the capture.
 
-## Updates 
-- **20/11/2021**: improved **profile_posts_to_xlsx_easy** with a new method for data processing. Now it's faster and avoid Instagram quota limitations.
-- 31/10/2021: improved **profile_posts_to_xlsx_fast** with ThreadPoolExecutor to multiprocess data from Instagram responses. This is an exploratory script.
-
-#### Citation
-*Citation APA Style: Padilla Molina, Adrian (2020). InstaloaderScripts [Software]. Avaliable from: https://github.com/AdriaPadilla/InstaloaderScripts/*
