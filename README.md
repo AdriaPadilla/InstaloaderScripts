@@ -4,9 +4,9 @@ Here you'll find some scripts to make your live easier when working with Instalo
 
 ## Important
 
-Instaloader is constantly improving and evolving, and adapting its code to platform changes. This implies that some endpoints may change, and some of the scripts may stop working.
+Instaloader is constantly improving and adapting the base code to Instagram changes. Some endpoints may change, and some of the scripts can stop working.
 
-The objective of this repository is to serve as an example, it has educational purposes, and in no case does it pretend to be perfect or fully functional.
+The aim of this repository is to serve as an example, with educational purposes.
 
 Please, see: [Instaloader](https://instaloader.github.io/)
 
